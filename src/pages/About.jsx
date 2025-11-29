@@ -121,7 +121,7 @@ const About = () => {
 
             {/* Bio */}
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-neon-cyan">Hello, I'm John Doe</h2>
+              <h2 className="text-3xl font-bold text-neon-cyan">Hello I'm Lemayian Murero</h2>
               <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p>
                   I'm a passionate frontend developer with a strong foundation in modern web technologies. 
@@ -129,7 +129,7 @@ const About = () => {
                   into the world of web development.
                 </p>
                 <p>
-                  Currently, I'm focused on mastering React and expanding my skills into backend development. 
+                  Currently, I'm focused on mastering React and expanding my skills into frontend development. 
                   I believe in continuous learning and staying up-to-date with the latest technologies and 
                   best practices in the industry.
                 </p>

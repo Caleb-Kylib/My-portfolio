@@ -117,7 +117,7 @@ const Home = () => {
           className="text-6xl md:text-8xl font-bold mb-6 glow-text"
         >
           <span className="bg-gradient-to-r from-neon-blue via-neon-purple to-neon-cyan bg-clip-text text-transparent">
-            Your Name
+            Lemayian Caleb 
           </span>
         </motion.h1>
 
