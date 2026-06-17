@@ -8,9 +8,6 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Projects from './pages/Projects'
 import Skills from './pages/Skills'
-import Roadmap from './pages/Roadmap'
-import Blog from './pages/Blog'
-import Resume from './pages/Resume'
 import Contact from './pages/Contact'
 import CursorTrail from './components/CursorTrail'
 
@@ -27,9 +24,6 @@ function App() {
     about: <About />,
     projects: <Projects />,
     skills: <Skills />,
-    roadmap: <Roadmap />,
-    blog: <Blog />,
-    resume: <Resume />,
     contact: <Contact />
   }
 

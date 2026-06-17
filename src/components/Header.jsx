@@ -18,9 +18,6 @@ const Header = ({ currentPage, setCurrentPage }) => {
     { id: 'about', label: 'About' },
     { id: 'projects', label: 'Projects' },
     { id: 'skills', label: 'Skills' },
-    { id: 'roadmap', label: 'Roadmap' },
-    { id: 'blog', label: 'Blog' },
-    { id: 'resume', label: 'Resume' },
     { id: 'contact', label: 'Contact' }
   ]
 
