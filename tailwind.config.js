@@ -7,31 +7,34 @@ export default {
   theme: {
     extend: {
       colors: {
-        'neon-blue': '#00f5ff',
-        'neon-purple': '#bf00ff',
-        'neon-cyan': '#00ffff',
-        'dark-bg': '#0a0a0a',
-        'dark-surface': '#1a1a1a',
-        'dark-border': '#2a2a2a',
-      },
-      animation: {
-        'glow': 'glow 2s ease-in-out infinite alternate',
-        'float': 'float 3s ease-in-out infinite',
-        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-      },
-      keyframes: {
-        glow: {
-          '0%': { boxShadow: '0 0 5px #00f5ff, 0 0 10px #00f5ff, 0 0 15px #00f5ff' },
-          '100%': { boxShadow: '0 0 10px #00f5ff, 0 0 20px #00f5ff, 0 0 30px #00f5ff' },
-        },
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-10px)' },
-        }
+        // ── Global palette ───────────────────────────────
+        'p-bg':      '#141212', // page / body background
+        'p-card':    '#1C1A19', // card / container surface
+        'p-badge':   '#2A2827', // pill / badge background
+        'p-border':  '#2E2C2B', // subtle border
+        'p-border2': '#3A3836', // slightly lighter border
+        'p-white':   '#FFFFFF', // primary titles
+        'p-silver':  '#A19E9B', // body copy / descriptions
+        'p-muted':   '#706E6B', // labels like "TECH STACK"
+
+        // ── Legacy aliases kept so nothing breaks ────────
+        'dark-bg':      '#141212',
+        'dark-surface': '#1C1A19',
+        'dark-border':  '#2E2C2B',
       },
       fontFamily: {
-        'mono': ['JetBrains Mono', 'monospace'],
-      }
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+      },
+      animation: {
+        'float': 'float 3s ease-in-out infinite',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%':       { transform: 'translateY(-8px)' },
+        },
+      },
     },
   },
   plugins: [],
