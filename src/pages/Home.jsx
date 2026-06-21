@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
+import meImg from '../assets/me.jpg'
 
 // ── Animation helpers ─────────────────────────────────────────────────────────
 const fadeUp = {
@@ -59,14 +60,10 @@ const Hero = () => (
             style={{ width: 'clamp(200px, 26vw, 290px)' }}
           >
             <img
-              src="/profile.jpg"
+              src={meImg}
               alt="Lemayian Caleb"
               className="w-full object-cover object-top"
               style={{ aspectRatio: '3/4' }}
-              onError={(e) => {
-                e.currentTarget.style.display = 'none'
-                e.currentTarget.parentElement.setAttribute('data-empty', 'true')
-              }}
             />
           </div>
         </motion.div>
@@ -101,14 +98,7 @@ const AboutSection = () => {
           <p className="text-[#A19E9B] text-[1rem] leading-relaxed max-w-2xl">A quick look at my background, how I got here, and what drives me to keep building.</p>
         </motion.div>
 
-        <motion.div initial={{opacity:0,y:24}} animate={inView?{opacity:1,y:0}:{}} transition={{duration:0.55,delay:0.1}} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          <div className="flex justify-center lg:justify-start">
-            <div className="rounded-3xl overflow-hidden border-2 border-[#2E2C2B] shadow-2xl bg-[#1C1A19]" style={{width:'clamp(180px,22vw,260px)'}}>
-              <img src="/profile.jpg" alt="Lemayian Caleb" className="w-full object-cover object-top" style={{aspectRatio:'3/4'}}
-                onError={(e)=>{e.currentTarget.style.display='none';e.currentTarget.parentElement.setAttribute('data-empty','true')}} />
-            </div>
-          </div>
-          <div className="space-y-5">
+        <motion.div initial={{opacity:0,y:24}} animate={inView?{opacity:1,y:0}:{}} transition={{duration:0.55,delay:0.1}} className="space-y-5">
             <h3 className="text-2xl font-bold text-white">Hello, I'm Lemayian Caleb</h3>
             <div className="space-y-4 text-[#A19E9B] text-[0.95rem] leading-relaxed">
               <p>I'm a full-stack developer with a genuine passion for building things on the web. My journey started with simple curiosity — tinkering with HTML and wondering how everything fit together — and grew into a career built around clean code and great design.</p>
@@ -123,8 +113,7 @@ const AboutSection = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
 
         <motion.div initial={{opacity:0,y:24}} animate={inView?{opacity:1,y:0}:{}} transition={{duration:0.55,delay:0.2}} className="space-y-6">
           <div><p className="text-xs font-semibold uppercase tracking-widest text-[#706E6B]">Experience</p><h3 className="text-2xl font-bold text-white mt-1">Career Timeline</h3></div>

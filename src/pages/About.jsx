@@ -92,7 +92,7 @@ const About = () => {
                 style={{ width: 'clamp(200px, 24vw, 280px)' }}
               >
                 <img
-                  src="/profile.jpg"
+                  src="/me.jpg"
                   alt="Lemayian Caleb"
                   className="w-full object-cover object-top"
                   style={{ aspectRatio: '3/4' }}
@@ -124,23 +124,16 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-[#A19E9B] text-[0.95rem] leading-relaxed">
                 <p>
-                  I'm a full-stack developer with a genuine passion for
-                  building things on the web. My journey started with simple
-                  curiosity — tinkering with HTML and wondering how everything
-                  fit together — and grew into a career built around clean code
-                  and great design.
+                  I build modern web applications that combine clean design, reliable backend systems and great user experiences.
+                  My tech stack includes React and Tailwind CSS for crafting responsive interfaces, Node.js and Express.js for backend development
+                  and PHP alongside Django for building dynamic, scalable web applications.
+                  I work with MongoDB, MySQL and PostgreSQL to design and manage efficient data-driven systems.
+                 I'm also expanding my cloud expertise through Google Cloud, learning how to deploy, monitor 
+                 and scale applications effectively while improving my understanding of modern production environments.
                 </p>
                 <p>
-                  Today I work across the full stack: React and Tailwind on the
-                  front, Node.js and Python on the back, and cloud platforms
-                  like AWS and Google Cloud to tie it all together. I care as
-                  much about performance and maintainability as I do about how
-                  something looks and feels.
-                </p>
-                <p>
-                  When I'm not coding, you'll find me exploring design trends,
-                  contributing to open-source, or mentoring others just getting
-                  started in the field.
+                  When I'm not coding, I enjoy participating in hackathons, exploring new technologies and collaborating with other developers.
+                 I'm driven by curiosity, continuous learning and the challenge of turning ideas into products people can use.
                 </p>
               </div>
 
