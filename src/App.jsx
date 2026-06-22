@@ -3,9 +3,9 @@ import { Particles } from '@tsparticles/react'
 import { loadSlim } from '@tsparticles/slim'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Home from './pages/Home'
-import Projects from './pages/Projects'
 import CursorTrail from './components/CursorTrail'
+import Projects from './pages/Projects'
+import Home, { ContactSection } from './pages/Home'
 
 function App() {
   const [particles, setParticles] = useState(null)
@@ -48,11 +48,16 @@ function App() {
         <section id="projects">
           <Projects />
         </section>
+
+        <section id="contact">
+    <ContactSection />
+  </section>
       </main>
 
       <Footer />
     </div>
   )
 }
+
 
 export default App

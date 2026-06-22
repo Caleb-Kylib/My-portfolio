@@ -338,8 +338,8 @@ const Home = () => (
     <Divider />
     <SkillsSection />
     <Divider />
-    <ContactSection />
   </div>
 )
 
+export { ContactSection }
 export default Home

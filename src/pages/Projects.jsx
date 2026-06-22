@@ -1,6 +1,13 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
+// ── Project images ────────────────────────────────────────────────────────────
+import hakiImg   from '../assets/haki-line.jpg'
+import littleImg from '../assets/little-kids.jpg'
+import geoImg    from '../assets/geo-axis.jpg'
+import freshImg  from '../assets/freshcart.jpg'
+import vistaImg  from '../assets/vista-kenya.jpg'
+
 // ── Tech pill icon map ────────────────────────────────────────────────────────
 const TECH_ICONS = {
   'HTML5':          '🌐',
@@ -60,9 +67,13 @@ const ProjectCard = ({ project, index, onOpen }) => {
         onMouseEnter={() => setImgHovered(true)} onMouseLeave={() => setImgHovered(false)}>
         <motion.div animate={{ scale: imgHovered ? 1.05 : 1 }} transition={{ duration: 0.4, ease: 'easeOut' }}
           className="w-full h-full">
-          <div className="w-full h-full bg-gradient-to-br from-[#1f2937] via-[#111827] to-[#0f172a] flex items-center justify-center">
-            <span className="text-7xl opacity-20 select-none">{project.emoji}</span>
-          </div>
+          {project.image ? (
+            <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+          ) : (
+            <div className="w-full h-full bg-gradient-to-br from-[#1f2937] via-[#111827] to-[#0f172a] flex items-center justify-center">
+              <span className="text-7xl opacity-20 select-none">{project.emoji}</span>
+            </div>
+          )}
         </motion.div>
 
         {/* Buttons top-right */}
@@ -141,7 +152,7 @@ const ALL_PROJECTS = [
     tagline: 'Property law, made accessible',
     description:
       'A clean, professional website for a Nairobi-based legal firm specialising in property law in Kenya. Built as a pure HTML/CSS/JS site and deployed on Vercel, it delivers fast load times and a polished brand presence for the firm\'s clients.',
-    emoji: '⚖️',
+    image: hakiImg,
     tools: ['HTML5', 'CSS3', 'JavaScript', 'Vercel', 'Git'],
     category: 'Frontend',
     live: true,
@@ -157,7 +168,7 @@ const ALL_PROJECTS = [
     tagline: 'A digital home for early childhood education',
     description:
       'Multi-page website for a Kenyan childcare and early-education institution. Features a parent FAQ chatbot, Formspree-powered contact forms with honeypot spam protection, scroll animations, and Python maintenance scripts for image optimisation and CSS deduplication.',
-    emoji: '🎒',
+    image: littleImg,
     tools: ['HTML5', 'CSS3', 'Bootstrap 5', 'JavaScript', 'Python', 'Pillow', 'Formspree', 'Vercel'],
     category: 'Frontend',
     live: true,
@@ -173,11 +184,11 @@ const ALL_PROJECTS = [
     tagline: 'Precision land surveying, online',
     description:
       'Professional website for a licensed Nairobi-based land surveying firm. Showcases boundary, topographic, cadastral, RTK/GNSS, UAV/drone surveys, and estate subdivisions. Fully responsive with AOS scroll animations and SEO optimisation.',
-    emoji: '🗺️',
+    image: geoImg,
     tools: ['HTML5', 'CSS3', 'Bootstrap 5', 'JavaScript', 'Font Awesome', 'AOS', 'Git'],
     category: 'Frontend',
     live: true,
-    liveUrl: 'https://geoaxissurveyors.co.ke',
+    liveUrl: 'https://geo-axis-surveyors.vercel.app/',
     githubUrl: 'https://github.com/Caleb-Kylib/geo-axis-surveyors',
     problem: 'A licensed surveying firm lacked an online presence to showcase its service offerings and attract new clients across Kenya.',
     solution: 'Created a professional, SEO-friendly website with clear service pages, scroll-triggered animations, and a responsive layout for all devices.',
@@ -188,16 +199,16 @@ const ALL_PROJECTS = [
     title: 'FreshCart',
     tagline: 'Fresh groceries, delivered fast',
     description:
-      'A modern React + Vite grocery e-commerce frontend with a clean product catalogue, cart management, and a responsive checkout flow. Built with component-driven architecture and fast HMR development tooling.',
-    emoji: '🛒',
+      'Freshcart is a Full-Stack E-Commerce Platform Bridging Web and USSD Shopping Customers can browse products, manage orders, and complete purchases through a modern web application or a USSD interface for feature phones. By combining web and mobile accessibility,the platform reaches users regardless of their internet connectivity or device type.',
+    image: freshImg,
     tools: ['React', 'Vite', 'JavaScript', 'CSS3'],
     category: 'Frontend',
     live: false,
     liveUrl: null,
     githubUrl: 'https://github.com/Caleb-Kylib/freshcart',
-    problem: 'Needed a practical project to deepen React skills while building something tangible — a grocery shopping experience.',
-    solution: 'Developed a component-driven e-commerce UI with product listings, a dynamic cart, and Vite\'s fast build tooling for a smooth development experience.',
-    lessons: 'Deepened understanding of React state management, component composition, and modern front-end build tooling with Vite.',
+    problem: 'Many e-commerce platforms exclude users with feature phones or unreliable internet access, limiting their ability to shop online.',
+    solution: 'Built a production-ready full-stack e-commerce platform that combines a modern web application with a USSD interface, allowing customers to browse products, manage orders, and shop seamlessly from both smartphones and feature phones.',
+    lessons: 'Gained hands-on experience in full-stack application development, API integration, accessibility-focused design, state management, and building multi-channel user experiences that serve diverse user needs.',
   },
   {
     id: 5,
@@ -205,7 +216,7 @@ const ALL_PROJECTS = [
     tagline: 'Student housing, simplified',
     description:
       'A specialised real estate platform for students and young professionals near Kenyan universities. Features verified listings with KES 8,000–18,000 price caps, co-living and roommate matching with automated rent splitting, and flexible Pay-As-You-Stay payments. Includes offline access via a USSD simulator and SMS alerts through Africa\'s Talking.',
-    emoji: '🏘️',
+    image: vistaImg,
     tools: ['React', 'Tailwind CSS', 'Framer Motion', 'Node.js', 'Express.js', 'MongoDB', 'JWT', "Africa's Talking"],
     category: 'Full Stack',
     live: false,
@@ -286,9 +297,13 @@ const Projects = () => {
 
               {/* Modal hero */}
               <div className="relative w-full rounded-t-3xl overflow-hidden" style={{ aspectRatio: '16/9' }}>
-                <div className="w-full h-full bg-gradient-to-br from-[#1f2937] via-[#111827] to-[#0f172a] flex items-center justify-center">
-                  <span className="text-8xl opacity-20 select-none">{selected.emoji}</span>
-                </div>
+                {selected.image ? (
+                  <img src={selected.image} alt={selected.title} className="w-full h-full object-cover" />
+                ) : (
+                  <div className="w-full h-full bg-gradient-to-br from-[#1f2937] via-[#111827] to-[#0f172a] flex items-center justify-center">
+                    <span className="text-8xl opacity-20 select-none">{selected.emoji}</span>
+                  </div>
+                )}
                 <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}
                   onClick={() => setSelected(null)}
                   className="absolute top-3 right-3 w-9 h-9 flex items-center justify-center rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white hover:bg-black/80 transition-colors"
