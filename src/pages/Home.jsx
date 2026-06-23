@@ -3,6 +3,7 @@ import { motion, useInView } from 'framer-motion'
 
 // ── asset imports ─────────────────────────────────────────────────────────────
 import meImg           from '../assets/me.jpg'
+import jsLogoImg       from '../assets/javascript-logo.png'
 import phpImg          from '../assets/php-logo.png'
 import gcImg           from '../assets/google-cloud.png'
 import ghActionsImg    from '../assets/github-actions.png'
@@ -166,7 +167,7 @@ const skillIcons = {
   'Claude Code':    <PngIcon src={claudeImg}     alt="Claude Code" />,
 
   // ── Inline SVG ───────────────────────────────────────────────────────────
-  'JavaScript':   (<svg viewBox="0 0 32 32" className="w-9 h-9"><rect width="32" height="32" rx="4" fill="#F7DF1E"/><path fill="#000" d="M9.5 25.3c.6 1 1.4 1.7 2.9 1.7 1.2 0 2-.6 2-1.4 0-1-.8-1.3-2.2-1.9l-.7-.3c-2.2-.9-3.6-2.1-3.6-4.5 0-2.2 1.7-3.9 4.4-3.9 1.9 0 3.3.7 4.3 2.4l-2.3 1.5c-.5-.9-1.1-1.3-1.9-1.3-.9 0-1.4.5-1.4 1.2 0 .8.5 1.2 1.8 1.7l.7.3c2.6 1.1 4 2.2 4 4.7 0 2.7-2.1 4.1-4.9 4.1-2.8 0-4.5-1.3-5.4-3.1l2.3-1.2zm11 .3c.4.8.8 1.4 1.8 1.4.9 0 1.5-.4 1.5-1.8v-9.9h2.8v10c0 3-1.7 4.3-4.3 4.3-2.3 0-3.6-1.2-4.3-2.6l2.5-1.4z"/></svg>),
+  'JavaScript':     <PngIcon src={jsLogoImg}     alt="JavaScript" />,
   'TypeScript':   (<svg viewBox="0 0 32 32" className="w-9 h-9"><rect width="32" height="32" rx="4" fill="#3178C6"/><path fill="#fff" d="M18.3 20v1.8c.5.2 1 .4 1.6.4.7 0 1.2-.2 1.6-.5.3-.3.5-.8.5-1.4 0-.5-.1-.9-.4-1.2-.3-.3-.8-.6-1.5-.9-.5-.2-.8-.4-.9-.5-.1-.1-.2-.3-.2-.5s.1-.4.2-.5c.2-.1.4-.2.7-.2.6 0 1.1.2 1.6.7v-1.7a4 4 0 00-1.7-.4c-.7 0-1.2.2-1.6.5-.4.3-.6.8-.6 1.4 0 .9.5 1.5 1.5 2 .6.2.9.4 1.1.6.1.1.2.3.2.5s-.1.4-.3.5c-.2.1-.4.2-.7.2-.7 0-1.3-.3-1.8-.8zm-4.8-3.6H16v-1.6H10v1.6h2.5V26h1.9v-9.6z"/></svg>),
   'React JS':     (<svg viewBox="0 0 32 32" className="w-9 h-9"><circle cx="16" cy="16" r="16" fill="#20232A"/><circle cx="16" cy="16" r="3" fill="#61DAFB"/><ellipse cx="16" cy="16" rx="11" ry="4.2" fill="none" stroke="#61DAFB" strokeWidth="1.3"/><ellipse cx="16" cy="16" rx="11" ry="4.2" fill="none" stroke="#61DAFB" strokeWidth="1.3" transform="rotate(60 16 16)"/><ellipse cx="16" cy="16" rx="11" ry="4.2" fill="none" stroke="#61DAFB" strokeWidth="1.3" transform="rotate(120 16 16)"/></svg>),
   'Angular':      (<svg viewBox="0 0 32 32" className="w-9 h-9"><circle cx="16" cy="16" r="16" fill="#DD0031"/><path fill="#fff" d="M16 4L5 8.5l1.7 14L16 28l9.3-5.5L27 8.5 16 4zm0 3l7.2 3.2-1.3 10.5L16 23.5l-5.9-2.8L8.8 10.2 16 7z"/><path fill="#fff" d="M16 10l-4 8h1.5l.8-2h3.4l.8 2H20l-4-8zm0 2.5l1.2 2.5h-2.4L16 12.5z"/></svg>),
