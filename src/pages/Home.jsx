@@ -42,17 +42,30 @@ const Hero = () => (
           <motion.p variants={fadeUp} className="text-xs font-semibold uppercase tracking-widest text-[#706E6B]">
             Hi, I'm Lemayian Caleb
           </motion.p>
-          <motion.h1 variants={fadeUp}
-            className="text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-white leading-[1.1] tracking-tight">
-            <span className="mr-3" role="img" aria-label="waving hand">👋</span>
-            Full-Stack Developer &amp;&nbsp;UI Craftsman
-          </motion.h1>
-          <motion.p variants={fadeUp} className="text-[1rem] text-[#A19E9B] leading-relaxed max-w-lg">
-            I build clean, performant web applications from the ground up — spanning React front-ends,
-            Node.js APIs, and thoughtful database design. I care deeply about the craft: readable code,
-            fast interfaces, and experiences that feel effortless to use.
-          </motion.p>
-        </motion.div>
+              <motion.h1
+  variants={fadeUp}
+   className="text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-white leading-[1.1] tracking-tight">
+  <span className="mr-3" role="img" aria-label="waving hand">
+    👋
+  </span>
+  Full-Stack Developer
+</motion.h1>
+
+    <motion.h2
+     variants={fadeUp}
+     className="mt-2 text-xl md:text-2xl font-medium text-[#A19E9B]">
+     Digital Solutions Builder
+   </motion.h2>
+
+    <motion.p
+    variants={fadeUp}
+     className="mt-6 text-[1rem] text-[#A19E9B] leading-relaxed max-w-lg">
+    I help businesses bring their ideas to life through modern web
+    applications that are fast, scalable, and user-friendly. From crafting
+     seamless interfaces to building secure back-end systems, I create
+     solutions that drive growth and deliver real value.
+     </motion.p>
+      </motion.div>
 
         {/* Portrait */}
         <motion.div variants={fadeIn} initial="hidden" animate="visible"
@@ -103,21 +116,22 @@ const AboutSection = () => {
           <h3 className="text-2xl font-bold text-white">Hello, I'm Lemayian Caleb</h3>
           <div className="space-y-4 text-[#A19E9B] text-[0.95rem] leading-relaxed">
             <p>
-              I build modern web applications that combine clean design, reliable backend systems and great
-              user experiences. My tech stack includes React and Tailwind CSS for crafting responsive
-              interfaces, Node.js and Express.js for backend development, and PHP alongside Django for
-              building dynamic, scalable web applications. I work with MongoDB, MySQL and PostgreSQL to
-              design and manage efficient data-driven systems.
+              I'm a Full-Stack Developer passionate about building modern web applications that are both visually engaging and 
+              technically robust. I enjoy transforming ideas into digital products that solve real-world problems, 
+              combining intuitive user experiences with scalable back-end systems.
             </p>
             <p>
-              I'm also expanding my cloud expertise through Google Cloud, learning how to deploy, monitor
-              and scale applications effectively while improving my understanding of modern production
-              environments.
+              My development toolkit includes React and Tailwind CSS for creating responsive, user-friendly interfaces, alongside Node.js, Express.js, Django
+               and PHP for developing reliable server-side applications. I work with MongoDB, MySQL 
+              and PostgreSQL to design efficient, data-driven solutions that support business growth and long-term scalability.
             </p>
             <p>
-              When I'm not coding, I enjoy participating in hackathons, exploring new technologies and
-              collaborating with other developers. I'm driven by curiosity, continuous learning and the
-              challenge of turning ideas into products people can use.
+              Beyond application development, I'm expanding my expertise in cloud technologies through Google Cloud, learning how to deploy, monitor 
+              and scale applications in production environments while following modern DevOps and software engineering practices.
+            </p>
+            <p>
+              Outside of coding, you'll often find me participating in hackathons, exploring emerging technologies and collaborating with fellow developers. I'm driven by curiosity, 
+              continuous learning, and the challenge of building products that create meaningful impact for the people who use them
             </p>
           </div>
 
