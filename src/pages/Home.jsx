@@ -2,7 +2,7 @@ import { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 
 // ── asset imports ─────────────────────────────────────────────────────────────
-import meImg           from '../assets/me.jpg'
+import meImg           from '../assets/profile.jpg'
 import jsLogoImg       from '../assets/javascript-logo.png'
 import phpImg          from '../assets/php-logo.png'
 import gcImg           from '../assets/google-cloud.png'
